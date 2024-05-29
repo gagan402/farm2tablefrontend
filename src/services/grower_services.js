@@ -9,30 +9,30 @@ function itemsManagerFetchData(emailString)
 
 function itemsManagerdoDelete(objId)
 {
-    return publicAxios.get("/grower/delete-products?_id="+objId)
+    return privateReq.get("/grower/delete-products?_id="+objId)
 }
 
 
 function availGrowerProductsDoPublish(obj)
 {
-    return publicAxios.post("/grower/avail-products",obj)
+    return privateReq.post("/grower/avail-products",obj)
 }
 
 
 function GrowerProfileBtnSave(obj)
 {
-    return publicAxios.post("/grower/add-grower-profile",obj);
+    return privateReq.post("/grower/add-grower-profile",obj);
 }
 
 
 function GrowerProfileGetProfileData(emailString)
 {
-    return publicAxios.get("/grower/search-grower-profile?email="+emailString);
+    return privateReq.get("/grower/search-grower-profile?email="+emailString);
 }
 
 
 function GrowerProfileDoUpdateProfile(obj)
 {
-        return publicAxios.post("/grower/update-grower-profile",obj)
+        return privateReq.post("/grower/update-grower-profile",obj)
 }
 export {itemsManagerFetchData,itemsManagerdoDelete,availGrowerProductsDoPublish,GrowerProfileBtnSave,GrowerProfileGetProfileData,GrowerProfileDoUpdateProfile};
