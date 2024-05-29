@@ -78,7 +78,7 @@ function GrowerProfile() {
       setObj({...result.data});
       setImgPrv(`${baseURL}/uploads/${result.data.picpath}`);
 
-      setImgPrv("http://localhost:8000/uploads/"+result.data.picpath);
+      // setImgPrv("http://localhost:8000/uploads/"+result.data.picpath);
       document.getElementById("updateButton").disabled = false;
       document.getElementById("saveButton").disabled = true;
       document.getElementById("updateButton").classList.remove("opacity-200", "blur-sm", "cursor-not-allowed");
