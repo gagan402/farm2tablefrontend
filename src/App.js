@@ -25,6 +25,7 @@ function App() {
   const handleLogout = () => {
     if (window.confirm("Are you sure you want to logout?")) {
       localStorage.removeItem('token');
+      localStorage.removeItem('emailid');
       navigate('/');
     }
   };
